@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="{{ STATIC_URL }}style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+{% block content %}
+<header> Feast your eyes </header>
+	{% for post in posts %}
+
+		<p class="img-style"><img src="{{ post.photo.url }}"></p>
+		<p class="content-style">{{ post.content }}</p>
+	{% endfor %}
+{% endblock content %}
+</body>
+</html>
+
